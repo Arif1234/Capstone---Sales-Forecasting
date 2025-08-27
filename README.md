@@ -62,9 +62,44 @@ Ensure you have the following installed:
 - Python 3.8+  
 - Jupyter Notebook  
 
-### Installation  
+## 📖 Documentation
 
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/Arif1234/Capstone---Sales-Forecasting.git
-   cd Capstone---Sales-Forecasting
+For further reference, please check:
+
+- [Statsmodels SARIMAX](https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html)  
+- [VAR Models](https://www.statsmodels.org/stable/vector_ar.html)  
+- [Johansen Cointegration](https://www.statsmodels.org/stable/generated/statsmodels.tsa.vector_ar.vecm.coint_johansen.html)  
+
+---
+
+## 🛠️ Challenges/Issues Faced with Fixes
+
+- **Convergence Issues in SARIMAX** → Resolved using multiple optimizers (`lbfgs`, `powell`, `nm`) and fallbacks without exogenous variables.  
+- **Non-stationarity in Sales/Customers** → Fixed using log-transform and differencing (`d=1`).  
+- **High Variance in Outliers** → Winsorization applied at 99th percentile.  
+- **Feature Gaps** → Engineered exogenous regressors (`Promo`, `Promo2`, `SchoolHoliday`, `IsHoliday`).  
+
+---
+
+## 🌟 Future Improvements
+
+- [ ] Incorporate Deep Learning models (LSTM, Transformer-based Time-Series).  
+- [ ] Extend forecasting horizon beyond 6 weeks.  
+- [ ] Automate hyperparameter tuning with grid search or Bayesian optimization.  
+- [ ] Build a dashboard (Streamlit/PowerBI) for interactive forecasts.  
+
+---
+
+## 🛡️ License
+
+Distributed under the MIT License. See `LICENSE` for more information.  
+
+---
+
+## 💬 Contact
+
+For any queries or feedback, feel free to reach out:
+
+- **Email**: mdtasleemarif@gmail.com  
+- **GitHub**: [Arif1234](https://github.com/Arif1234)  
+- **LinkedIn**: [Mohammad Tasleem Arif](https://www.linkedin.com/in/mohammad-tasleem-arif)  
